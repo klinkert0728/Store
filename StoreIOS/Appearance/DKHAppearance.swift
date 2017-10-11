@@ -25,7 +25,6 @@ class Appearance: NSObject {
         configureNavBarTitleFont()
     }
     
-    
     class func configureNavBarTitleFont(){
         if let font = UIFont(name: CustomFont.QuicksandBold.rawValue, size:18) {
             UINavigationBar.appearance().titleTextAttributes = [NSForegroundColorAttributeName: UIColor.white, NSFontAttributeName: font]
@@ -120,41 +119,6 @@ extension UIColor {
     
     
     
-    class func programColor() -> UIColor {
-        return UIColor(hex:"#f5475d")
-    }
-    
-    class func programColorLight() -> UIColor {
-        return UIColor(hex: "#fa4965")
-    }
-    
-    class func programColorDisable() -> UIColor {
-        return UIColor(red: 255.0 / 255.0, green: 91.0 / 255.0, blue: 123.0 / 255.0, alpha: 0.3)
-    }
-    
-    class func sosColor() -> UIColor {
-        return UIColor(hex:"#b7b6e0")
-    }
-    
-    class func habitatIIIColor() -> UIColor {
-        return  UIColor(red:0.95, green:0.27, blue:0.35, alpha:1.0)
-    }
-    
-    class func commitmentSearchBar() -> UIColor {
-        return UIColor(red:0.93, green:0.93, blue:0.93, alpha:1.0)
-    }
-    
-    class func H3BlackColor() -> UIColor {
-        return UIColor(red: 24.0/255.0, green: 22.0/255.0, blue: 23.0/255.0, alpha: 1)
-    }
-    class func H3GrayColor() -> UIColor {
-        return UIColor(red: 128.0/255.0, green: 128.0/255.0, blue: 128.0/255.0, alpha: 1)
-    }
-    
-    class func grayLigthColor() -> UIColor {
-        return UIColor(white: 165.0 / 255.0, alpha: 1.0)
-    }
-    
     
     
     class func colorFromString(titleColor:String) -> UIColor {
@@ -163,24 +127,6 @@ extension UIColor {
             return UIColor.white
         case "clear":
             return UIColor.clear
-        case "gray":
-            return UIColor.H3GrayColor()
-        case "lightgray":
-            return UIColor.grayLigthColor()
-        case "black":
-            return UIColor.H3BlackColor()
-        case "programLight":
-            return UIColor.programColorLight()
-        case "program":
-            return UIColor.programColor()
-        case "program_disable":
-            return UIColor.programColorDisable()
-        case "sos":
-            return UIColor.sosColor()
-        case "habitat":
-            return UIColor.habitatIIIColor()
-        case "commitmentsearch":
-            return UIColor.commitmentSearchBar()
         default:
             return UIColor.white
         }
@@ -193,17 +139,6 @@ extension UIColor {
             return "white"
         case UIColor.clear:
             return "clear"
-        case UIColor.H3GrayColor():
-            return "gray"
-        case UIColor.grayLigthColor():
-            return "lightgray"
-        case UIColor.H3BlackColor():
-            return "black"
-        case UIColor.programColor():
-            return "program"
-        case UIColor.sosColor():
-            return "sos"
-            
         default:
             return "clear"
         }
