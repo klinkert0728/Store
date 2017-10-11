@@ -22,6 +22,8 @@
 		96F805B61F8EBE5100BC1E7C /* DKHRXHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96F805B11F8EBE5100BC1E7C /* DKHRXHelper.swift */; };
 		96F805B71F8EBE5100BC1E7C /* DKHUIHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96F805B21F8EBE5100BC1E7C /* DKHUIHelper.swift */; };
 		96F805BB1F8EBE7000BC1E7C /* UITextView+Placeholder.m in Sources */ = {isa = PBXBuildFile; fileRef = 96F805BA1F8EBE7000BC1E7C /* UITextView+Placeholder.m */; };
+		96F805BD1F8EC0CA00BC1E7C /* DKHUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96F805BC1F8EC0CA00BC1E7C /* DKHUser.swift */; };
+		96F805BF1F8EC15500BC1E7C /* KNMTCRealmModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96F805BE1F8EC15500BC1E7C /* KNMTCRealmModel.swift */; };
 		AD8C94F87DBDBF2FCA5D50B0 /* Pods_StoreIOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4BD39919D7C3D9EC447F85C0 /* Pods_StoreIOS.framework */; };
 /* End PBXBuildFile section */
 
@@ -47,6 +49,8 @@
 		96F805B81F8EBE7000BC1E7C /* StoreIOS-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "StoreIOS-Bridging-Header.h"; sourceTree = "<group>"; };
 		96F805B91F8EBE7000BC1E7C /* UITextView+Placeholder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITextView+Placeholder.h"; sourceTree = "<group>"; };
 		96F805BA1F8EBE7000BC1E7C /* UITextView+Placeholder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITextView+Placeholder.m"; sourceTree = "<group>"; };
+		96F805BC1F8EC0CA00BC1E7C /* DKHUser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DKHUser.swift; sourceTree = "<group>"; };
+		96F805BE1F8EC15500BC1E7C /* KNMTCRealmModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KNMTCRealmModel.swift; sourceTree = "<group>"; };
 		CB8DE675CCEE2BF24CF87662 /* Pods-StoreIOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StoreIOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-StoreIOS/Pods-StoreIOS.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -127,6 +131,7 @@
 			isa = PBXGroup;
 			children = (
 				96F8059E1F8EBC4000BC1E7C /* DKHStore.swift */,
+				96F805BC1F8EC0CA00BC1E7C /* DKHUser.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -134,6 +139,7 @@
 		96F805A01F8EBC8F00BC1E7C /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				96F805BE1F8EC15500BC1E7C /* KNMTCRealmModel.swift */,
 				96F805B91F8EBE7000BC1E7C /* UITextView+Placeholder.h */,
 				96F805BA1F8EBE7000BC1E7C /* UITextView+Placeholder.m */,
 				96F805AE1F8EBE5100BC1E7C /* DKHExtensions.swift */,
@@ -327,6 +333,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				96F805B31F8EBE5100BC1E7C /* DKHExtensions.swift in Sources */,
+				96F805BF1F8EC15500BC1E7C /* KNMTCRealmModel.swift in Sources */,
+				96F805BD1F8EC0CA00BC1E7C /* DKHUser.swift in Sources */,
 				96F8059C1F8EAA0C00BC1E7C /* DKHEndPoint.swift in Sources */,
 				96F805AB1F8EBD9400BC1E7C /* DKHAppearance.swift in Sources */,
 				96F805B61F8EBE5100BC1E7C /* DKHRXHelper.swift in Sources */,
