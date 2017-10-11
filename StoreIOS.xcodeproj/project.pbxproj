@@ -14,6 +14,14 @@
 		96F805911F8EA92A00BC1E7C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 96F8058F1F8EA92A00BC1E7C /* LaunchScreen.storyboard */; };
 		96F8059A1F8EA9A300BC1E7C /* DKHAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96F805991F8EA9A300BC1E7C /* DKHAPIClient.swift */; };
 		96F8059C1F8EAA0C00BC1E7C /* DKHEndPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96F8059B1F8EAA0C00BC1E7C /* DKHEndPoint.swift */; };
+		96F8059F1F8EBC4000BC1E7C /* DKHStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96F8059E1F8EBC4000BC1E7C /* DKHStore.swift */; };
+		96F805AB1F8EBD9400BC1E7C /* DKHAppearance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96F805AA1F8EBD9400BC1E7C /* DKHAppearance.swift */; };
+		96F805B31F8EBE5100BC1E7C /* DKHExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96F805AE1F8EBE5100BC1E7C /* DKHExtensions.swift */; };
+		96F805B41F8EBE5100BC1E7C /* DKHNavigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96F805AF1F8EBE5100BC1E7C /* DKHNavigation.swift */; };
+		96F805B51F8EBE5100BC1E7C /* DKHRealmHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96F805B01F8EBE5100BC1E7C /* DKHRealmHelper.swift */; };
+		96F805B61F8EBE5100BC1E7C /* DKHRXHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96F805B11F8EBE5100BC1E7C /* DKHRXHelper.swift */; };
+		96F805B71F8EBE5100BC1E7C /* DKHUIHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96F805B21F8EBE5100BC1E7C /* DKHUIHelper.swift */; };
+		96F805BB1F8EBE7000BC1E7C /* UITextView+Placeholder.m in Sources */ = {isa = PBXBuildFile; fileRef = 96F805BA1F8EBE7000BC1E7C /* UITextView+Placeholder.m */; };
 		AD8C94F87DBDBF2FCA5D50B0 /* Pods_StoreIOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4BD39919D7C3D9EC447F85C0 /* Pods_StoreIOS.framework */; };
 /* End PBXBuildFile section */
 
@@ -29,6 +37,16 @@
 		96F805921F8EA92A00BC1E7C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		96F805991F8EA9A300BC1E7C /* DKHAPIClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DKHAPIClient.swift; sourceTree = "<group>"; };
 		96F8059B1F8EAA0C00BC1E7C /* DKHEndPoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DKHEndPoint.swift; sourceTree = "<group>"; };
+		96F8059E1F8EBC4000BC1E7C /* DKHStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DKHStore.swift; sourceTree = "<group>"; };
+		96F805AA1F8EBD9400BC1E7C /* DKHAppearance.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DKHAppearance.swift; sourceTree = "<group>"; };
+		96F805AE1F8EBE5100BC1E7C /* DKHExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DKHExtensions.swift; sourceTree = "<group>"; };
+		96F805AF1F8EBE5100BC1E7C /* DKHNavigation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DKHNavigation.swift; sourceTree = "<group>"; };
+		96F805B01F8EBE5100BC1E7C /* DKHRealmHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DKHRealmHelper.swift; sourceTree = "<group>"; };
+		96F805B11F8EBE5100BC1E7C /* DKHRXHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DKHRXHelper.swift; sourceTree = "<group>"; };
+		96F805B21F8EBE5100BC1E7C /* DKHUIHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DKHUIHelper.swift; sourceTree = "<group>"; };
+		96F805B81F8EBE7000BC1E7C /* StoreIOS-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "StoreIOS-Bridging-Header.h"; sourceTree = "<group>"; };
+		96F805B91F8EBE7000BC1E7C /* UITextView+Placeholder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITextView+Placeholder.h"; sourceTree = "<group>"; };
+		96F805BA1F8EBE7000BC1E7C /* UITextView+Placeholder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITextView+Placeholder.m"; sourceTree = "<group>"; };
 		CB8DE675CCEE2BF24CF87662 /* Pods-StoreIOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StoreIOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-StoreIOS/Pods-StoreIOS.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -82,6 +100,9 @@
 		96F805851F8EA92A00BC1E7C /* StoreIOS */ = {
 			isa = PBXGroup;
 			children = (
+				96F805A91F8EBD7800BC1E7C /* Appearance */,
+				96F805A01F8EBC8F00BC1E7C /* Helpers */,
+				96F8059D1F8EBC2700BC1E7C /* Model */,
 				96F805981F8EA97800BC1E7C /* Network */,
 				96F805861F8EA92A00BC1E7C /* AppDelegate.swift */,
 				96F805881F8EA92A00BC1E7C /* ViewController.swift */,
@@ -100,6 +121,37 @@
 				96F8059B1F8EAA0C00BC1E7C /* DKHEndPoint.swift */,
 			);
 			path = Network;
+			sourceTree = "<group>";
+		};
+		96F8059D1F8EBC2700BC1E7C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				96F8059E1F8EBC4000BC1E7C /* DKHStore.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		96F805A01F8EBC8F00BC1E7C /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				96F805B91F8EBE7000BC1E7C /* UITextView+Placeholder.h */,
+				96F805BA1F8EBE7000BC1E7C /* UITextView+Placeholder.m */,
+				96F805AE1F8EBE5100BC1E7C /* DKHExtensions.swift */,
+				96F805AF1F8EBE5100BC1E7C /* DKHNavigation.swift */,
+				96F805B01F8EBE5100BC1E7C /* DKHRealmHelper.swift */,
+				96F805B11F8EBE5100BC1E7C /* DKHRXHelper.swift */,
+				96F805B21F8EBE5100BC1E7C /* DKHUIHelper.swift */,
+				96F805B81F8EBE7000BC1E7C /* StoreIOS-Bridging-Header.h */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		96F805A91F8EBD7800BC1E7C /* Appearance */ = {
+			isa = PBXGroup;
+			children = (
+				96F805AA1F8EBD9400BC1E7C /* DKHAppearance.swift */,
+			);
+			path = Appearance;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,6 +190,7 @@
 					96F805821F8EA92A00BC1E7C = {
 						CreatedOnToolsVersion = 8.3.3;
 						DevelopmentTeam = XYJ2TQ4992;
+						LastSwiftMigration = 0830;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -273,10 +326,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				96F805B31F8EBE5100BC1E7C /* DKHExtensions.swift in Sources */,
 				96F8059C1F8EAA0C00BC1E7C /* DKHEndPoint.swift in Sources */,
+				96F805AB1F8EBD9400BC1E7C /* DKHAppearance.swift in Sources */,
+				96F805B61F8EBE5100BC1E7C /* DKHRXHelper.swift in Sources */,
 				96F805891F8EA92A00BC1E7C /* ViewController.swift in Sources */,
+				96F805B51F8EBE5100BC1E7C /* DKHRealmHelper.swift in Sources */,
 				96F805871F8EA92A00BC1E7C /* AppDelegate.swift in Sources */,
+				96F805BB1F8EBE7000BC1E7C /* UITextView+Placeholder.m in Sources */,
+				96F805B41F8EBE5100BC1E7C /* DKHNavigation.swift in Sources */,
 				96F8059A1F8EA9A300BC1E7C /* DKHAPIClient.swift in Sources */,
+				96F8059F1F8EBC4000BC1E7C /* DKHStore.swift in Sources */,
+				96F805B71F8EBE5100BC1E7C /* DKHUIHelper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -400,11 +461,14 @@
 			baseConfigurationReference = CB8DE675CCEE2BF24CF87662 /* Pods-StoreIOS.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = XYJ2TQ4992;
 				INFOPLIST_FILE = StoreIOS/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = DKH.StoreIOS;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "StoreIOS/Helpers/StoreIOS-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -414,11 +478,13 @@
 			baseConfigurationReference = 6018349770AD49BD844DBBA4 /* Pods-StoreIOS.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = XYJ2TQ4992;
 				INFOPLIST_FILE = StoreIOS/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = DKH.StoreIOS;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "StoreIOS/Helpers/StoreIOS-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
