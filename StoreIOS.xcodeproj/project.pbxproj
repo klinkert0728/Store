@@ -13,6 +13,10 @@
 		969F47821F97B5CA00912F85 /* RobotoCondensed-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 969F477E1F97B5CA00912F85 /* RobotoCondensed-Bold.ttf */; };
 		969F47831F97B5CA00912F85 /* RobotoCondensed-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 969F477F1F97B5CA00912F85 /* RobotoCondensed-Italic.ttf */; };
 		969F47841F97B5CA00912F85 /* RobotoCondensed-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 969F47801F97B5CA00912F85 /* RobotoCondensed-Regular.ttf */; };
+		969F47861F97BEB100912F85 /* BaseNavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 969F47851F97BEB100912F85 /* BaseNavigationViewController.swift */; };
+		969F47891F97BF3600912F85 /* SelectCategoryTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 969F47881F97BF3600912F85 /* SelectCategoryTableViewController.swift */; };
+		969F478E1F97BFA900912F85 /* EmptyTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 969F478C1F97BFA900912F85 /* EmptyTableViewCell.swift */; };
+		969F478F1F97BFA900912F85 /* EmptyTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 969F478D1F97BFA900912F85 /* EmptyTableViewCell.xib */; };
 		96F805871F8EA92A00BC1E7C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96F805861F8EA92A00BC1E7C /* AppDelegate.swift */; };
 		96F805891F8EA92A00BC1E7C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96F805881F8EA92A00BC1E7C /* ViewController.swift */; };
 		96F8058C1F8EA92A00BC1E7C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 96F8058A1F8EA92A00BC1E7C /* Main.storyboard */; };
@@ -42,6 +46,10 @@
 		969F477E1F97B5CA00912F85 /* RobotoCondensed-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "RobotoCondensed-Bold.ttf"; sourceTree = "<group>"; };
 		969F477F1F97B5CA00912F85 /* RobotoCondensed-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "RobotoCondensed-Italic.ttf"; sourceTree = "<group>"; };
 		969F47801F97B5CA00912F85 /* RobotoCondensed-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "RobotoCondensed-Regular.ttf"; sourceTree = "<group>"; };
+		969F47851F97BEB100912F85 /* BaseNavigationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseNavigationViewController.swift; sourceTree = "<group>"; };
+		969F47881F97BF3600912F85 /* SelectCategoryTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectCategoryTableViewController.swift; sourceTree = "<group>"; };
+		969F478C1F97BFA900912F85 /* EmptyTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmptyTableViewCell.swift; sourceTree = "<group>"; };
+		969F478D1F97BFA900912F85 /* EmptyTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EmptyTableViewCell.xib; sourceTree = "<group>"; };
 		96F805831F8EA92A00BC1E7C /* StoreIOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StoreIOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		96F805861F8EA92A00BC1E7C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		96F805881F8EA92A00BC1E7C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -100,6 +108,7 @@
 			children = (
 				969F47781F97B3DA00912F85 /* BaseTableViewController.swift */,
 				969F477A1F97B3E900912F85 /* BaseViewController.swift */,
+				969F47851F97BEB100912F85 /* BaseNavigationViewController.swift */,
 			);
 			path = BaseControllers;
 			sourceTree = "<group>";
@@ -113,6 +122,31 @@
 				969F47801F97B5CA00912F85 /* RobotoCondensed-Regular.ttf */,
 			);
 			path = Fonts;
+			sourceTree = "<group>";
+		};
+		969F47871F97BF1600912F85 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				969F47881F97BF3600912F85 /* SelectCategoryTableViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		969F478A1F97BF6600912F85 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				969F478B1F97BF9100912F85 /* Cells */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		969F478B1F97BF9100912F85 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				969F478C1F97BFA900912F85 /* EmptyTableViewCell.swift */,
+				969F478D1F97BFA900912F85 /* EmptyTableViewCell.xib */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 		96F8057A1F8EA92A00BC1E7C = {
@@ -142,6 +176,8 @@
 				96F8059D1F8EBC2700BC1E7C /* Model */,
 				96F805981F8EA97800BC1E7C /* Network */,
 				969F47771F97B3C400912F85 /* BaseControllers */,
+				969F47871F97BF1600912F85 /* Controllers */,
+				969F478A1F97BF6600912F85 /* Views */,
 				96F805861F8EA92A00BC1E7C /* AppDelegate.swift */,
 				96F805881F8EA92A00BC1E7C /* ViewController.swift */,
 				96F8058A1F8EA92A00BC1E7C /* Main.storyboard */,
@@ -259,6 +295,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				96F805911F8EA92A00BC1E7C /* LaunchScreen.storyboard in Resources */,
+				969F478F1F97BFA900912F85 /* EmptyTableViewCell.xib in Resources */,
 				969F47821F97B5CA00912F85 /* RobotoCondensed-Bold.ttf in Resources */,
 				969F47841F97B5CA00912F85 /* RobotoCondensed-Regular.ttf in Resources */,
 				96F8058E1F8EA92A00BC1E7C /* Assets.xcassets in Resources */,
@@ -381,9 +418,12 @@
 				96F805871F8EA92A00BC1E7C /* AppDelegate.swift in Sources */,
 				96F805BB1F8EBE7000BC1E7C /* UITextView+Placeholder.m in Sources */,
 				96F805B41F8EBE5100BC1E7C /* DKHNavigation.swift in Sources */,
+				969F47891F97BF3600912F85 /* SelectCategoryTableViewController.swift in Sources */,
+				969F47861F97BEB100912F85 /* BaseNavigationViewController.swift in Sources */,
 				96F8059A1F8EA9A300BC1E7C /* DKHAPIClient.swift in Sources */,
 				969F47791F97B3DA00912F85 /* BaseTableViewController.swift in Sources */,
 				969F477B1F97B3E900912F85 /* BaseViewController.swift in Sources */,
+				969F478E1F97BFA900912F85 /* EmptyTableViewCell.swift in Sources */,
 				96F8059F1F8EBC4000BC1E7C /* DKHStore.swift in Sources */,
 				96F805B71F8EBE5100BC1E7C /* DKHUIHelper.swift in Sources */,
 			);

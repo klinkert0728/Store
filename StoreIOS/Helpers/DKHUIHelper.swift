@@ -21,7 +21,7 @@ import UIKit
     }
     
     
-    @IBInspectable var femmeFontColor : String {
+    @IBInspectable var fontColor : String {
         set{
             self.textColor = UIColor.colorFromString(titleColor: newValue)
         }
@@ -30,7 +30,7 @@ import UIKit
         }
     }
     
-    @IBInspectable var femmeFontType : Int {
+    @IBInspectable var fontType : Int {
         set{
             self.font = UIFont(name: CustomFont.allValues[newValue].rawValue, size: font.pointSize)
         }
@@ -61,7 +61,7 @@ import UIKit
         super.didMoveToSuperview()
     }
     
-    @IBInspectable var femmeFontColor : String {
+    @IBInspectable var fontColor : String {
         set{
             self.setTitleColor(UIColor.colorFromString(titleColor: newValue), for: UIControlState.normal)
         }
@@ -70,7 +70,7 @@ import UIKit
         }
     }
     
-    @IBInspectable var femmeFontType:Int {
+    @IBInspectable var fontType:Int {
         set{
             self.titleLabel?.font = UIFont(name: CustomFont.allValues[newValue].rawValue, size: self.titleLabel!.font.pointSize)
         }
@@ -79,7 +79,7 @@ import UIKit
         }
     }
     
-    @IBInspectable var femmeBackgroundColor : String {
+    @IBInspectable var backgroundColorString : String {
         set{
             self.setBackgroundImage(UIImage.imageFromColor(color: UIColor.colorFromString(titleColor: newValue)), for: .normal)
             self.backgroundColor = UIColor.colorFromString(titleColor: newValue)
@@ -89,7 +89,7 @@ import UIKit
         }
     }
     
-    @IBInspectable var femmeBackgroundColorDisable : String {
+    @IBInspectable var backgroundColorDisable : String {
         set{
             self.setBackgroundImage(UIImage.imageFromColor(color: UIColor.colorFromString(titleColor: newValue)), for: .disabled)
             self.backgroundColor = UIColor.colorFromString(titleColor: newValue)
