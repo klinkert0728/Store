@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		969F47791F97B3DA00912F85 /* BaseTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 969F47781F97B3DA00912F85 /* BaseTableViewController.swift */; };
+		969F477B1F97B3E900912F85 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 969F477A1F97B3E900912F85 /* BaseViewController.swift */; };
+		969F47811F97B5CA00912F85 /* Quicksand-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 969F477D1F97B5CA00912F85 /* Quicksand-Bold.ttf */; };
+		969F47821F97B5CA00912F85 /* RobotoCondensed-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 969F477E1F97B5CA00912F85 /* RobotoCondensed-Bold.ttf */; };
+		969F47831F97B5CA00912F85 /* RobotoCondensed-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 969F477F1F97B5CA00912F85 /* RobotoCondensed-Italic.ttf */; };
+		969F47841F97B5CA00912F85 /* RobotoCondensed-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 969F47801F97B5CA00912F85 /* RobotoCondensed-Regular.ttf */; };
 		96F805871F8EA92A00BC1E7C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96F805861F8EA92A00BC1E7C /* AppDelegate.swift */; };
 		96F805891F8EA92A00BC1E7C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96F805881F8EA92A00BC1E7C /* ViewController.swift */; };
 		96F8058C1F8EA92A00BC1E7C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 96F8058A1F8EA92A00BC1E7C /* Main.storyboard */; };
@@ -30,6 +36,12 @@
 /* Begin PBXFileReference section */
 		4BD39919D7C3D9EC447F85C0 /* Pods_StoreIOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_StoreIOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6018349770AD49BD844DBBA4 /* Pods-StoreIOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StoreIOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-StoreIOS/Pods-StoreIOS.release.xcconfig"; sourceTree = "<group>"; };
+		969F47781F97B3DA00912F85 /* BaseTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseTableViewController.swift; sourceTree = "<group>"; };
+		969F477A1F97B3E900912F85 /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		969F477D1F97B5CA00912F85 /* Quicksand-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Quicksand-Bold.ttf"; sourceTree = "<group>"; };
+		969F477E1F97B5CA00912F85 /* RobotoCondensed-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "RobotoCondensed-Bold.ttf"; sourceTree = "<group>"; };
+		969F477F1F97B5CA00912F85 /* RobotoCondensed-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "RobotoCondensed-Italic.ttf"; sourceTree = "<group>"; };
+		969F47801F97B5CA00912F85 /* RobotoCondensed-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "RobotoCondensed-Regular.ttf"; sourceTree = "<group>"; };
 		96F805831F8EA92A00BC1E7C /* StoreIOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StoreIOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		96F805861F8EA92A00BC1E7C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		96F805881F8EA92A00BC1E7C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -83,6 +95,26 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		969F47771F97B3C400912F85 /* BaseControllers */ = {
+			isa = PBXGroup;
+			children = (
+				969F47781F97B3DA00912F85 /* BaseTableViewController.swift */,
+				969F477A1F97B3E900912F85 /* BaseViewController.swift */,
+			);
+			path = BaseControllers;
+			sourceTree = "<group>";
+		};
+		969F477C1F97B5CA00912F85 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				969F477D1F97B5CA00912F85 /* Quicksand-Bold.ttf */,
+				969F477E1F97B5CA00912F85 /* RobotoCondensed-Bold.ttf */,
+				969F477F1F97B5CA00912F85 /* RobotoCondensed-Italic.ttf */,
+				969F47801F97B5CA00912F85 /* RobotoCondensed-Regular.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
 		96F8057A1F8EA92A00BC1E7C = {
 			isa = PBXGroup;
 			children = (
@@ -104,10 +136,12 @@
 		96F805851F8EA92A00BC1E7C /* StoreIOS */ = {
 			isa = PBXGroup;
 			children = (
+				969F477C1F97B5CA00912F85 /* Fonts */,
 				96F805A91F8EBD7800BC1E7C /* Appearance */,
 				96F805A01F8EBC8F00BC1E7C /* Helpers */,
 				96F8059D1F8EBC2700BC1E7C /* Model */,
 				96F805981F8EA97800BC1E7C /* Network */,
+				969F47771F97B3C400912F85 /* BaseControllers */,
 				96F805861F8EA92A00BC1E7C /* AppDelegate.swift */,
 				96F805881F8EA92A00BC1E7C /* ViewController.swift */,
 				96F8058A1F8EA92A00BC1E7C /* Main.storyboard */,
@@ -225,8 +259,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				96F805911F8EA92A00BC1E7C /* LaunchScreen.storyboard in Resources */,
+				969F47821F97B5CA00912F85 /* RobotoCondensed-Bold.ttf in Resources */,
+				969F47841F97B5CA00912F85 /* RobotoCondensed-Regular.ttf in Resources */,
 				96F8058E1F8EA92A00BC1E7C /* Assets.xcassets in Resources */,
 				96F8058C1F8EA92A00BC1E7C /* Main.storyboard in Resources */,
+				969F47811F97B5CA00912F85 /* Quicksand-Bold.ttf in Resources */,
+				969F47831F97B5CA00912F85 /* RobotoCondensed-Italic.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -344,6 +382,8 @@
 				96F805BB1F8EBE7000BC1E7C /* UITextView+Placeholder.m in Sources */,
 				96F805B41F8EBE5100BC1E7C /* DKHNavigation.swift in Sources */,
 				96F8059A1F8EA9A300BC1E7C /* DKHAPIClient.swift in Sources */,
+				969F47791F97B3DA00912F85 /* BaseTableViewController.swift in Sources */,
+				969F477B1F97B3E900912F85 /* BaseViewController.swift in Sources */,
 				96F8059F1F8EBC4000BC1E7C /* DKHStore.swift in Sources */,
 				96F805B71F8EBE5100BC1E7C /* DKHUIHelper.swift in Sources */,
 			);

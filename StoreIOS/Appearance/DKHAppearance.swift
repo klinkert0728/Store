@@ -9,9 +9,9 @@
 import Foundation
 enum CustomFont : String {
     case RobotoCondensedRegular = "RobotoCondensed-Regular"
-    case RobotoCondensedItalic = "RobotoCondensed-Italic"
-    case RobotoCondensedBold = "RobotoCondensed-Bold"
-    case QuicksandBold = "Quicksand-Bold"
+    case RobotoCondensedItalic  = "RobotoCondensed-Italic"
+    case RobotoCondensedBold    = "RobotoCondensed-Bold"
+    case QuicksandBold          = "Quicksand-Bold"
     
     static let allValues = [RobotoCondensedRegular,RobotoCondensedItalic,RobotoCondensedBold,QuicksandBold]
 }
@@ -30,7 +30,6 @@ class Appearance: NSObject {
             UINavigationBar.appearance().titleTextAttributes = [NSForegroundColorAttributeName: UIColor.white, NSFontAttributeName: font]
         }
         UINavigationBar.appearance().tintColor = UIColor.white
-        
     }
     
     class func colorNavigationBar(color:UIColor, navigationBar: UINavigationBar?){
@@ -118,7 +117,9 @@ class Appearance: NSObject {
 extension UIColor {
     
     
-    
+    class var primaryColor:UIColor {
+        return UIColor(hex: "#FF5722")
+    }
     
     
     class func colorFromString(titleColor:String) -> UIColor {
@@ -127,6 +128,8 @@ extension UIColor {
             return UIColor.white
         case "clear":
             return UIColor.clear
+        case "primary":
+            return UIColor.primaryColor
         default:
             return UIColor.white
         }
@@ -139,6 +142,8 @@ extension UIColor {
             return "white"
         case UIColor.clear:
             return "clear"
+        case UIColor.primaryColor:
+            return "primary"
         default:
             return "clear"
         }
