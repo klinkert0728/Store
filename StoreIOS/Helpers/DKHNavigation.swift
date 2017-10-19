@@ -15,4 +15,9 @@ class DKHNavigation {
         return UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "SelectCategoryTableViewController") as! SelectCategoryTableViewController
     }
     
+     // MARK: - Sign In
+    class func signInNavigationViewController() -> BaseNavigationViewController {
+        return UIStoryboard(name: "SignIn", bundle: nil).instantiateViewController(withIdentifier: "BaseLoginNavigationViewController") as! BaseNavigationViewController
+    }
+    
 }
