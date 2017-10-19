@@ -62,6 +62,14 @@ class SelectCategoryTableViewController: BaseTableViewController {
         return cell
     }
     
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        var selectedCategory = storeCategories[indexPath.row]
+        
+        var selectProductsVc = DKHNavigation.selectStoreProducts()
+        selectProductsVc.selectedCategory = selectedCategory.uuid
+        self.navigationController?.pushViewController(selectProductsVc, animated: true)
+    }
+    
 
     /*
     // Override to support conditional editing of the table view.

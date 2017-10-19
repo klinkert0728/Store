@@ -15,6 +15,10 @@ class DKHNavigation {
         return UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "SelectCategoryTableViewController") as! SelectCategoryTableViewController
     }
     
+    class func selectStoreProducts() -> ProductsTableViewController {
+        return UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "ProductsTableViewController") as! ProductsTableViewController
+    }
+    
      // MARK: - Sign In
     class func signInNavigationViewController() -> BaseNavigationViewController {
         return UIStoryboard(name: "SignIn", bundle: nil).instantiateViewController(withIdentifier: "BaseLoginNavigationViewController") as! BaseNavigationViewController

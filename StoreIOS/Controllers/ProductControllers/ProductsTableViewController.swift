@@ -9,10 +9,12 @@
 import UIKit
 
 class ProductsTableViewController: BaseTableViewController {
-
+    var products            = [DKHProduct]()
+    var selectedCategory:String?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        getProductsForSelectedCategory()
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
@@ -43,7 +45,7 @@ class ProductsTableViewController: BaseTableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 2
+        return products.count
     }
 
     
@@ -53,6 +55,19 @@ class ProductsTableViewController: BaseTableViewController {
         // Configure the cell...
 
         return cell
+    }
+    
+    private func getProductsForSelectedCategory() {
+        guard let selectedCategory = selectedCategory else {
+            return
+        }
+        
+        DKHProduct.getProductsByCategory(endpoint: DKHEndPoint.getProductsByCategory(categoryUuid: selectedCategory), selectedCategory: selectedCategory, successClosure: { (products:[DKHProduct]) in
+            self.products = products
+            self.tableView.reloadData()
+        }, errorClosure: {error in
+            
+        })
     }
     
 
