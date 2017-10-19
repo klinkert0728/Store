@@ -28,6 +28,7 @@ extension APIEndpoint {
 }
 
 enum DKHEndPoint {
+    case register(name:String,email:String,password:String,userType:String)
     case getCategories()
     case getProductsByCategory(categoryUuid:String)
 }
@@ -48,6 +49,8 @@ extension DKHEndPoint:APIEndpoint {
             return "category"
         case .getProductsByCategory(categoryUuid: let categoryUUid):
             return "product\(categoryUUid)"
+        case .register(name: _, email: _, password: _, userType: _):
+            return "user"
         default:
             return "json"
         }
@@ -57,6 +60,8 @@ extension DKHEndPoint:APIEndpoint {
     var method: HTTPMethod {
         
         switch self {
+        case .register(name: _, email: _, password: _, userType: _):
+            return .post
         default:
             return .get
         }
@@ -65,6 +70,8 @@ extension DKHEndPoint:APIEndpoint {
     var parameters:[String:Any]? {
         
         switch self {
+        case .register(name: let name, email: let email, password: let password, userType: _):
+            return ["name":name,"email":email,"password":password,"userType":"str"]
         default:
             return [:]
         }
