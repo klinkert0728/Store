@@ -11,6 +11,11 @@ import ObjectMapper
 import RealmSwift
 import Realm
 
+
+class RealmString:Object {
+    dynamic var value = ""
+}
+
 open class ArrayTransform<T:RealmSwift.Object> : TransformType where T:Mappable {
     public typealias Object = List<T>
     public typealias JSON = Array<Any>
