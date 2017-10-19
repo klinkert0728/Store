@@ -17,6 +17,7 @@
 		969F47891F97BF3600912F85 /* SelectCategoryTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 969F47881F97BF3600912F85 /* SelectCategoryTableViewController.swift */; };
 		969F478E1F97BFA900912F85 /* EmptyTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 969F478C1F97BFA900912F85 /* EmptyTableViewCell.swift */; };
 		969F478F1F97BFA900912F85 /* EmptyTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 969F478D1F97BFA900912F85 /* EmptyTableViewCell.xib */; };
+		96A9EFB71F98551300EA7EF3 /* DKHCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96A9EFB61F98551300EA7EF3 /* DKHCategory.swift */; };
 		96F805871F8EA92A00BC1E7C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96F805861F8EA92A00BC1E7C /* AppDelegate.swift */; };
 		96F805891F8EA92A00BC1E7C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96F805881F8EA92A00BC1E7C /* ViewController.swift */; };
 		96F8058C1F8EA92A00BC1E7C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 96F8058A1F8EA92A00BC1E7C /* Main.storyboard */; };
@@ -50,6 +51,7 @@
 		969F47881F97BF3600912F85 /* SelectCategoryTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectCategoryTableViewController.swift; sourceTree = "<group>"; };
 		969F478C1F97BFA900912F85 /* EmptyTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmptyTableViewCell.swift; sourceTree = "<group>"; };
 		969F478D1F97BFA900912F85 /* EmptyTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EmptyTableViewCell.xib; sourceTree = "<group>"; };
+		96A9EFB61F98551300EA7EF3 /* DKHCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DKHCategory.swift; sourceTree = "<group>"; };
 		96F805831F8EA92A00BC1E7C /* StoreIOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StoreIOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		96F805861F8EA92A00BC1E7C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		96F805881F8EA92A00BC1E7C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -202,6 +204,7 @@
 			children = (
 				96F8059E1F8EBC4000BC1E7C /* DKHStore.swift */,
 				96F805BC1F8EC0CA00BC1E7C /* DKHUser.swift */,
+				96A9EFB61F98551300EA7EF3 /* DKHCategory.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -260,13 +263,13 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0830;
-				LastUpgradeCheck = 0830;
+				LastUpgradeCheck = 0900;
 				ORGANIZATIONNAME = "Daniel Klinkert Houfer";
 				TargetAttributes = {
 					96F805821F8EA92A00BC1E7C = {
 						CreatedOnToolsVersion = 8.3.3;
 						DevelopmentTeam = XYJ2TQ4992;
-						LastSwiftMigration = 0830;
+						LastSwiftMigration = 0900;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -319,7 +322,7 @@
 				"${BUILT_PRODUCTS_DIR}/AlamofireImage/AlamofireImage.framework",
 				"${BUILT_PRODUCTS_DIR}/AlamofireObjectMapper/AlamofireObjectMapper.framework",
 				"${BUILT_PRODUCTS_DIR}/Bolts/Bolts.framework",
-				"${BUILT_PRODUCTS_DIR}/DateTools/DateTools.framework",
+				"${BUILT_PRODUCTS_DIR}/DateToolsSwift/DateToolsSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/FBSDKCoreKit/FBSDKCoreKit.framework",
 				"${BUILT_PRODUCTS_DIR}/FBSDKLoginKit/FBSDKLoginKit.framework",
 				"${BUILT_PRODUCTS_DIR}/HCSStarRatingView/HCSStarRatingView.framework",
@@ -330,7 +333,6 @@
 				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
 				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
-				"${BUILT_PRODUCTS_DIR}/RxRealm/RxRealm.framework",
 				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/SBPickerSelector/SBPickerSelector.framework",
 				"${BUILT_PRODUCTS_DIR}/SVProgressHUD/SVProgressHUD.framework",
@@ -341,7 +343,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireImage.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireObjectMapper.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Bolts.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DateTools.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DateToolsSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKCoreKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKLoginKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/HCSStarRatingView.framework",
@@ -352,7 +354,6 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxRealm.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SBPickerSelector.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SVProgressHUD.framework",
@@ -416,6 +417,7 @@
 				96F805891F8EA92A00BC1E7C /* ViewController.swift in Sources */,
 				96F805B51F8EBE5100BC1E7C /* DKHRealmHelper.swift in Sources */,
 				96F805871F8EA92A00BC1E7C /* AppDelegate.swift in Sources */,
+				96A9EFB71F98551300EA7EF3 /* DKHCategory.swift in Sources */,
 				96F805BB1F8EBE7000BC1E7C /* UITextView+Placeholder.m in Sources */,
 				96F805B41F8EBE5100BC1E7C /* DKHNavigation.swift in Sources */,
 				969F47891F97BF3600912F85 /* SelectCategoryTableViewController.swift in Sources */,
@@ -461,7 +463,9 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
@@ -469,7 +473,11 @@
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -498,6 +506,7 @@
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.0;
 			};
 			name = Debug;
 		};
@@ -511,7 +520,9 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
@@ -519,7 +530,11 @@
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -540,6 +555,7 @@
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 4.0;
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;

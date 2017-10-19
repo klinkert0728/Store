@@ -28,8 +28,7 @@ extension APIEndpoint {
 }
 
 enum DKHEndPoint {
-    
-    
+    case getCategories()
 }
 
 
@@ -38,13 +37,14 @@ extension DKHEndPoint:APIEndpoint {
     var baseUrl:URL {
         switch  self {
         default:
-            return URL(string: "http://api.lafemme.com.co")!
+            return URL(string: "http://138.197.33.33:4001/")!
         }
     }
     
     var path:String {
         switch self {
-            
+        case .getCategories():
+            return "category"
         default:
             return "json"
         }

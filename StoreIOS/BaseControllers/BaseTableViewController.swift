@@ -26,6 +26,6 @@ class BaseTableViewController: UITableViewController {
     }
     
     func configureAppearance() {
-        
+        tableView.tableFooterView   = UIView()
     }
 }

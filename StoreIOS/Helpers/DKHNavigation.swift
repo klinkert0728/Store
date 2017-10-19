@@ -11,5 +11,8 @@ import UIKit
 
 class DKHNavigation {
     
+    class func selectStoreCategories() -> SelectCategoryTableViewController {
+        return UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "SelectCategoryTableViewController") as! SelectCategoryTableViewController
+    }
     
 }
