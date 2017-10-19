@@ -18,6 +18,7 @@
 		969F478E1F97BFA900912F85 /* EmptyTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 969F478C1F97BFA900912F85 /* EmptyTableViewCell.swift */; };
 		969F478F1F97BFA900912F85 /* EmptyTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 969F478D1F97BFA900912F85 /* EmptyTableViewCell.xib */; };
 		96A9EFB71F98551300EA7EF3 /* DKHCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96A9EFB61F98551300EA7EF3 /* DKHCategory.swift */; };
+		96A9EFB91F985A6000EA7EF3 /* DKHProduct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96A9EFB81F985A6000EA7EF3 /* DKHProduct.swift */; };
 		96F805871F8EA92A00BC1E7C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96F805861F8EA92A00BC1E7C /* AppDelegate.swift */; };
 		96F805891F8EA92A00BC1E7C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96F805881F8EA92A00BC1E7C /* ViewController.swift */; };
 		96F8058C1F8EA92A00BC1E7C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 96F8058A1F8EA92A00BC1E7C /* Main.storyboard */; };
@@ -52,6 +53,7 @@
 		969F478C1F97BFA900912F85 /* EmptyTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmptyTableViewCell.swift; sourceTree = "<group>"; };
 		969F478D1F97BFA900912F85 /* EmptyTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EmptyTableViewCell.xib; sourceTree = "<group>"; };
 		96A9EFB61F98551300EA7EF3 /* DKHCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DKHCategory.swift; sourceTree = "<group>"; };
+		96A9EFB81F985A6000EA7EF3 /* DKHProduct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DKHProduct.swift; sourceTree = "<group>"; };
 		96F805831F8EA92A00BC1E7C /* StoreIOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StoreIOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		96F805861F8EA92A00BC1E7C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		96F805881F8EA92A00BC1E7C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -205,6 +207,7 @@
 				96F8059E1F8EBC4000BC1E7C /* DKHStore.swift */,
 				96F805BC1F8EC0CA00BC1E7C /* DKHUser.swift */,
 				96A9EFB61F98551300EA7EF3 /* DKHCategory.swift */,
+				96A9EFB81F985A6000EA7EF3 /* DKHProduct.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -427,6 +430,7 @@
 				969F477B1F97B3E900912F85 /* BaseViewController.swift in Sources */,
 				969F478E1F97BFA900912F85 /* EmptyTableViewCell.swift in Sources */,
 				96F8059F1F8EBC4000BC1E7C /* DKHStore.swift in Sources */,
+				96A9EFB91F985A6000EA7EF3 /* DKHProduct.swift in Sources */,
 				96F805B71F8EBE5100BC1E7C /* DKHUIHelper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
