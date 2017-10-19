@@ -29,7 +29,7 @@ extension APIEndpoint {
 
 enum DKHEndPoint {
     case getCategories()
-    case getProducts()
+    case getProductsByCategory(categoryUuid:String)
 }
 
 
@@ -46,8 +46,8 @@ extension DKHEndPoint:APIEndpoint {
         switch self {
         case .getCategories():
             return "category"
-        case .getProducts():
-            return "product"
+        case .getProductsByCategory(categoryUuid: let categoryUUid):
+            return "product\(categoryUUid)"
         default:
             return "json"
         }
