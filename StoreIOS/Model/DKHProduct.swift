@@ -40,7 +40,12 @@ class DKHProduct:Object,Mappable {
     
     func mapping(map: Map) {
         
+        uuid                <- map["uuid"]
+        name                <- map["name"]
+        productDescription  <- map["description"]
+        price               <- map["price"]
+        category            <- map["category"]
+        store               <- map["store"]
+        imagesArray         <- map["images"]
     }
-    
-    
 }
