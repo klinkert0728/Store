@@ -34,7 +34,7 @@ class DKHAPIClient {
                     return
                 }
                 
-                if let err = dict["error"] as? String, let statusCode = dict["statusCode"] as? Int {
+                if let statusCode = dict["statusCode"] as? Int {
                     if let message = dict["message"] as? String {
                         
                         let newError = NSError(domain: "", code: statusCode, userInfo: [NSLocalizedDescriptionKey:message])
@@ -42,7 +42,7 @@ class DKHAPIClient {
                         errorClosure(newError)
                     }
                     else {
-                        let newError = NSError(domain: "", code: statusCode, userInfo: [NSLocalizedDescriptionKey: "Error: \(err); Http code: \(statusCode)"])
+                        let newError = NSError(domain: "", code: statusCode, userInfo: [NSLocalizedDescriptionKey: "Error:  Http code: \(statusCode)"])
                         errorClosure(newError)
                     }
                 }
@@ -66,7 +66,7 @@ class DKHAPIClient {
                     return
                 }
                 
-                if let err = dict["error"] as? String, let statusCode = dict["statusCode"] as? Int {
+                if let statusCode = dict["statusCode"] as? Int {
                     if let message = dict["message"] as? String {
                         
                         let newError = NSError(domain: "", code: statusCode, userInfo: [NSLocalizedDescriptionKey:message])
@@ -74,7 +74,7 @@ class DKHAPIClient {
                         errorClosure(newError)
                     }
                     else {
-                        let newError = NSError(domain: "", code: statusCode, userInfo: [NSLocalizedDescriptionKey: "Error: \(err); Http code: \(statusCode)"])
+                        let newError = NSError(domain: "", code: statusCode, userInfo: [NSLocalizedDescriptionKey: "Error:  Http code: \(statusCode)"])
                         errorClosure(newError)
                     }
                 }
@@ -96,7 +96,7 @@ class DKHAPIClient {
                     return
                 }
                 
-                if let err = dict["error"] as? String, let statusCode = dict["statusCode"] as? Int {
+                if let statusCode = dict["statusCode"] as? Int {
                     if let message = dict["message"] as? String {
                         
                         let newError = NSError(domain: "", code: statusCode, userInfo: [NSLocalizedDescriptionKey:message])
@@ -104,7 +104,7 @@ class DKHAPIClient {
                         errorClosure(newError)
                     }
                     else {
-                        let newError = NSError(domain: "", code: statusCode, userInfo: [NSLocalizedDescriptionKey: "Error: \(err); Http code: \(statusCode)"])
+                        let newError = NSError(domain: "", code: statusCode, userInfo: [NSLocalizedDescriptionKey: "Error:  Http code: \(statusCode)"])
                         errorClosure(newError)
                     }
                 }
