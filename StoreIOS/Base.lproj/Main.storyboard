@@ -47,9 +47,6 @@
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
-                                <connections>
-                                    <segue destination="uFo-RE-QS4" kind="show" id="vvg-Ux-1FV"/>
-                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -58,6 +55,9 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" id="P5J-dF-hWC"/>
+                    <connections>
+                        <segue destination="uFo-RE-QS4" kind="show" id="1w0-AE-zuG"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pkv-M2-5rH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

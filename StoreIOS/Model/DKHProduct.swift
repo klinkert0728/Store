@@ -9,6 +9,7 @@
 import Foundation
 import RealmSwift
 import ObjectMapper
+import ReachabilitySwift
 
 class DKHProduct:Object,Mappable {
     
@@ -30,6 +31,10 @@ class DKHProduct:Object,Mappable {
         }
     }
     
+    override class func primaryKey() -> String? {
+        return "uuid"
+    }
+    
     convenience required init?(map: Map) {
         self.init()
     }
@@ -47,5 +52,29 @@ class DKHProduct:Object,Mappable {
         category            <- map["category"]
         store               <- map["store"]
         imagesArray         <- map["images"]
+    }
+    
+    class func getProductsByCategory(endpoint:DKHEndPoint, selectedCategory:String,successClosure:@escaping (_ products:[DKHProduct])->(),errorClosure: @escaping (_ error:String)->()) {
+        
+        let reachability = Reachability()!
+        if reachability.currentReachabilityStatus == .notReachable {
+            Realm.update { (realm) in
+                let products  = realm.objects(DKHProduct.self).filter("uud == '\(selectedCategory)'")
+                if products.count > 0 {
+                    successClosure(Array(products))
+                }else {
+                    errorClosure("No on database")
+                }
+            }
+        }else {
+            DKHAPIClient.sharedClient.requestArrayOfObject(endpoint: endpoint, completionHandler: { (products:[DKHProduct]) in
+                Realm.update(updateClosure: { (realm) in
+                    realm.add(products, update: true)
+                })
+                successClosure(products)
+            }, errorClosure: {error in
+                errorClosure(error.localizedDescription)
+            })
+        }
     }
 }
