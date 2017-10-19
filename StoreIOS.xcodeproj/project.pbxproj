@@ -20,6 +20,11 @@
 		96A9EFB71F98551300EA7EF3 /* DKHCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96A9EFB61F98551300EA7EF3 /* DKHCategory.swift */; };
 		96A9EFB91F985A6000EA7EF3 /* DKHProduct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96A9EFB81F985A6000EA7EF3 /* DKHProduct.swift */; };
 		96A9EFBE1F98EC4700EA7EF3 /* SignIn.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 96A9EFBD1F98EC4700EA7EF3 /* SignIn.storyboard */; };
+		96A9EFC01F992EA100EA7EF3 /* BaseTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96A9EFBF1F992EA100EA7EF3 /* BaseTabBarViewController.swift */; };
+		96A9EFC21F99343800EA7EF3 /* MainTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96A9EFC11F99343800EA7EF3 /* MainTabBarViewController.swift */; };
+		96A9EFC51F99412400EA7EF3 /* ProductTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96A9EFC31F99412400EA7EF3 /* ProductTableViewCell.swift */; };
+		96A9EFC61F99412400EA7EF3 /* ProductTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 96A9EFC41F99412400EA7EF3 /* ProductTableViewCell.xib */; };
+		96A9EFC91F99439400EA7EF3 /* ProductsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96A9EFC81F99439400EA7EF3 /* ProductsTableViewController.swift */; };
 		96F805871F8EA92A00BC1E7C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96F805861F8EA92A00BC1E7C /* AppDelegate.swift */; };
 		96F805891F8EA92A00BC1E7C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96F805881F8EA92A00BC1E7C /* ViewController.swift */; };
 		96F8058C1F8EA92A00BC1E7C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 96F8058A1F8EA92A00BC1E7C /* Main.storyboard */; };
@@ -56,6 +61,11 @@
 		96A9EFB61F98551300EA7EF3 /* DKHCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DKHCategory.swift; sourceTree = "<group>"; };
 		96A9EFB81F985A6000EA7EF3 /* DKHProduct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DKHProduct.swift; sourceTree = "<group>"; };
 		96A9EFBD1F98EC4700EA7EF3 /* SignIn.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SignIn.storyboard; sourceTree = "<group>"; };
+		96A9EFBF1F992EA100EA7EF3 /* BaseTabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTabBarViewController.swift; sourceTree = "<group>"; };
+		96A9EFC11F99343800EA7EF3 /* MainTabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarViewController.swift; sourceTree = "<group>"; };
+		96A9EFC31F99412400EA7EF3 /* ProductTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductTableViewCell.swift; sourceTree = "<group>"; };
+		96A9EFC41F99412400EA7EF3 /* ProductTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProductTableViewCell.xib; sourceTree = "<group>"; };
+		96A9EFC81F99439400EA7EF3 /* ProductsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsTableViewController.swift; sourceTree = "<group>"; };
 		96F805831F8EA92A00BC1E7C /* StoreIOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StoreIOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		96F805861F8EA92A00BC1E7C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		96F805881F8EA92A00BC1E7C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -115,6 +125,7 @@
 				969F47781F97B3DA00912F85 /* BaseTableViewController.swift */,
 				969F477A1F97B3E900912F85 /* BaseViewController.swift */,
 				969F47851F97BEB100912F85 /* BaseNavigationViewController.swift */,
+				96A9EFBF1F992EA100EA7EF3 /* BaseTabBarViewController.swift */,
 			);
 			path = BaseControllers;
 			sourceTree = "<group>";
@@ -133,7 +144,9 @@
 		969F47871F97BF1600912F85 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				96A9EFC71F99438200EA7EF3 /* ProductControllers */,
 				969F47881F97BF3600912F85 /* SelectCategoryTableViewController.swift */,
+				96A9EFC11F99343800EA7EF3 /* MainTabBarViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -152,6 +165,8 @@
 			children = (
 				969F478C1F97BFA900912F85 /* EmptyTableViewCell.swift */,
 				969F478D1F97BFA900912F85 /* EmptyTableViewCell.xib */,
+				96A9EFC31F99412400EA7EF3 /* ProductTableViewCell.swift */,
+				96A9EFC41F99412400EA7EF3 /* ProductTableViewCell.xib */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -162,6 +177,14 @@
 				96A9EFBD1F98EC4700EA7EF3 /* SignIn.storyboard */,
 			);
 			path = storyboard;
+			sourceTree = "<group>";
+		};
+		96A9EFC71F99438200EA7EF3 /* ProductControllers */ = {
+			isa = PBXGroup;
+			children = (
+				96A9EFC81F99439400EA7EF3 /* ProductsTableViewController.swift */,
+			);
+			path = ProductControllers;
 			sourceTree = "<group>";
 		};
 		96F8057A1F8EA92A00BC1E7C = {
@@ -318,6 +341,7 @@
 				96A9EFBE1F98EC4700EA7EF3 /* SignIn.storyboard in Resources */,
 				96F8058E1F8EA92A00BC1E7C /* Assets.xcassets in Resources */,
 				96F8058C1F8EA92A00BC1E7C /* Main.storyboard in Resources */,
+				96A9EFC61F99412400EA7EF3 /* ProductTableViewCell.xib in Resources */,
 				969F47811F97B5CA00912F85 /* Quicksand-Bold.ttf in Resources */,
 				969F47831F97B5CA00912F85 /* RobotoCondensed-Italic.ttf in Resources */,
 			);
@@ -430,7 +454,10 @@
 				96F805AB1F8EBD9400BC1E7C /* DKHAppearance.swift in Sources */,
 				96F805B61F8EBE5100BC1E7C /* DKHRXHelper.swift in Sources */,
 				96F805891F8EA92A00BC1E7C /* ViewController.swift in Sources */,
+				96A9EFC01F992EA100EA7EF3 /* BaseTabBarViewController.swift in Sources */,
 				96F805B51F8EBE5100BC1E7C /* DKHRealmHelper.swift in Sources */,
+				96A9EFC91F99439400EA7EF3 /* ProductsTableViewController.swift in Sources */,
+				96A9EFC21F99343800EA7EF3 /* MainTabBarViewController.swift in Sources */,
 				96F805871F8EA92A00BC1E7C /* AppDelegate.swift in Sources */,
 				96A9EFB71F98551300EA7EF3 /* DKHCategory.swift in Sources */,
 				96F805BB1F8EBE7000BC1E7C /* UITextView+Placeholder.m in Sources */,
@@ -438,6 +465,7 @@
 				969F47891F97BF3600912F85 /* SelectCategoryTableViewController.swift in Sources */,
 				969F47861F97BEB100912F85 /* BaseNavigationViewController.swift in Sources */,
 				96F8059A1F8EA9A300BC1E7C /* DKHAPIClient.swift in Sources */,
+				96A9EFC51F99412400EA7EF3 /* ProductTableViewCell.swift in Sources */,
 				969F47791F97B3DA00912F85 /* BaseTableViewController.swift in Sources */,
 				969F477B1F97B3E900912F85 /* BaseViewController.swift in Sources */,
 				969F478E1F97BFA900912F85 /* EmptyTableViewCell.swift in Sources */,
