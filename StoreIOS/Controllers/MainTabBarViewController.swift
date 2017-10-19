@@ -8,7 +8,7 @@
 
 import UIKit
 
-class MainTabBarViewController: UITabBarController {
+class MainTabBarViewController: BaseTabBarViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -19,6 +19,9 @@ class MainTabBarViewController: UITabBarController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    override func tabBar(_ tabBar: UITabBar, didSelect item: UITabBarItem) {
     }
     
 
