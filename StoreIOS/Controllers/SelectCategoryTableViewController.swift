@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SVProgressHUD
 
 class SelectCategoryTableViewController: BaseTableViewController {
 
@@ -42,13 +43,13 @@ class SelectCategoryTableViewController: BaseTableViewController {
     }
 
     private func getCategories() {
-        
+        SVProgressHUD.show()
         DKHAPIClient.sharedClient.requestArrayOfObject(endpoint: DKHEndPoint.getCategories(), completionHandler: { (categories:[DKHCategory]) in
             self.storeCategories = categories
+            SVProgressHUD.dismiss()
             self.tableView.reloadData()
         }, errorClosure: {error in
-            
-            
+            SVProgressHUD.dismiss()
         })
     }
     
