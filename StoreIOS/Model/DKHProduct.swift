@@ -59,7 +59,7 @@ class DKHProduct:Object,Mappable {
         let reachability = Reachability()!
         if reachability.currentReachabilityStatus == .notReachable {
             Realm.update { (realm) in
-                let products  = realm.objects(DKHProduct.self).filter("uud == '\(selectedCategory)'")
+                let products  = realm.objects(DKHProduct.self).filter("uuid == '\(selectedCategory)'")
                 if products.count > 0 {
                     successClosure(Array(products))
                 }else {
