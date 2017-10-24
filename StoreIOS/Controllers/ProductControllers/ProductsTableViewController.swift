@@ -52,6 +52,7 @@ class ProductsTableViewController: BaseTableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "productCell", for: indexPath) as! ProductTableViewCell
 
+        cell.configureProduct(product: products[indexPath.row])
         // Configure the cell...
 
         return cell

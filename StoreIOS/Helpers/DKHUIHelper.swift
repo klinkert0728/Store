@@ -294,6 +294,24 @@ extension UITextField {
             return self.placeholder ?? ""
         }
     }
+    
+    @IBInspectable var leftIconName:String {
+        set {
+            
+            let arrow = UIImageView(image: UIImage(named:newValue))
+            if let size = arrow.image?.size {
+                arrow.frame = CGRect(x: 0.0, y: 0.0, width: size.width + 20, height: size.height)
+            }
+            
+            arrow.contentMode = UIViewContentMode.center
+            self.leftViewMode   = .always
+            self.leftView       = arrow
+        }
+        
+        get {
+            return ""
+        }
+    }
 }
 
 extension UITabBarController {
@@ -318,6 +336,16 @@ extension UITabBarItem {
         
         get {
             return self.title ?? ""
+        }
+    }
+    @IBInspectable var tintedImage:UIColor {
+        set {
+            
+            self.image = self.image?.imageWithTintColor(color: newValue)
+        }
+        
+        get {
+           return UIColor.black
         }
     }
 }

@@ -26,6 +26,11 @@ class SelectCategoryTableViewController: BaseTableViewController {
         super.registerCells()
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        checkUser()
+    }
+    
     override func configureAppearance() {
         super.configureAppearance()
     }
@@ -63,11 +68,22 @@ class SelectCategoryTableViewController: BaseTableViewController {
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        var selectedCategory = storeCategories[indexPath.row]
+        let selectedCategory = storeCategories[indexPath.row]
         
-        var selectProductsVc = DKHNavigation.selectStoreProducts()
+        let selectProductsVc = DKHNavigation.selectStoreProducts()
         selectProductsVc.selectedCategory = selectedCategory.uuid
         self.navigationController?.pushViewController(selectProductsVc, animated: true)
+    }
+    
+    private func checkUser() {
+        if !DKHUser.isLoggedIn {
+            let signInNav = DKHNavigation.signInNavigationViewController()
+            let signInVC  = signInNav.topViewController as!  SignInViewController
+            signInVC.successClosure = { _ in
+                self.navigationController?.dismiss(animated: true, completion: nil)
+            }
+            self.present(signInNav, animated: true, completion: nil)
+        }
     }
     
 

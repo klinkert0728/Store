@@ -9,11 +9,11 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Item-->
+        <!--Base Navigation View Controller-->
         <scene sceneID="xf0-HW-2Vh">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="N1v-EP-XZZ" customClass="BaseNavigationViewController" customModule="StoreIOS" customModuleProvider="target" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="laT-wK-cDE"/>
+                    <tabBarItem key="tabBarItem" systemItem="mostRecent" id="laT-wK-cDE"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Lm7-zG-4uG">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
@@ -30,6 +30,60 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aT5-aM-UPS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="12" y="117"/>
+        </scene>
+        <!--Root View Controller-->
+        <scene sceneID="Fgc-Ix-Wiv">
+            <objects>
+                <tableViewController id="9ZQ-Lj-r8N" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="mfK-YT-uUN">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="EYU-xI-VnN">
+                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="EYU-xI-VnN" id="9UT-aJ-IDP">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="9ZQ-Lj-r8N" id="qbJ-X3-JrT"/>
+                            <outlet property="delegate" destination="9ZQ-Lj-r8N" id="UUY-Lk-EOl"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Root View Controller" id="3Y7-fI-N8d"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qGf-kh-jnx" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="750" y="799"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="DAl-IK-Sfw">
+            <objects>
+                <navigationController id="eQj-Sa-wNT" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" image="user" selectedImage="user" id="w5q-7b-9iw">
+                        <offsetWrapper key="titlePositionAdjustment" horizontal="0.0" vertical="0.0"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="string" keyPath="locatlizedTitle" value="Profile"/>
+                            <userDefinedRuntimeAttribute type="color" keyPath="tintedImage">
+                                <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </tabBarItem>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="n1Y-3e-XF0">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="9ZQ-Lj-r8N" kind="relationship" relationship="rootViewController" id="DAQ-pm-Tod"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="IOn-pq-LiY" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="12" y="827"/>
         </scene>
         <!--Select Category Table View Controller-->
         <scene sceneID="edr-Pg-tUs">
@@ -94,6 +148,7 @@
         <!--Tab Bar Controller-->
         <scene sceneID="dKd-Vc-Url">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9bU-AW-YXE" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="5JG-lB-ciH" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" id="mrf-Uh-ujX">
@@ -101,13 +156,19 @@
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </tabBar>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="string" keyPath="iconTintColor" value="primary"/>
+                    </userDefinedRuntimeAttributes>
                     <connections>
-                        <segue destination="N1v-EP-XZZ" kind="relationship" relationship="viewControllers" id="qjr-ew-gvA"/>
+                        <segue destination="N1v-EP-XZZ" kind="relationship" relationship="viewControllers" id="tUx-Ee-YJe"/>
+                        <segue destination="eQj-Sa-wNT" kind="relationship" relationship="viewControllers" id="4sZ-qf-Zru"/>
                     </connections>
                 </tabBarController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="9bU-AW-YXE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-958" y="117"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="user" width="32" height="32"/>
+    </resources>
 </document>
