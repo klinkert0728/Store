@@ -10,14 +10,84 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Sign In View Controller-->
         <scene sceneID="hVz-9g-aST">
             <objects>
-                <viewController id="rkb-tR-Tlb" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SignInViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="rkb-tR-Tlb" customClass="SignInViewController" customModule="StoreIOS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="0ND-xg-d2C">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="pQH-2J-Hzx">
+                                <rect key="frame" x="100" y="72" width="175" height="114"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="114" id="WOy-4Q-Amc"/>
+                                </constraints>
+                            </imageView>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4Tn-1l-I6z">
+                                <rect key="frame" x="20" y="328.5" width="335" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="bnC-hD-y6j"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="leftIconName" value="password"/>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="localizedPlaceHolder" value="Password"/>
+                                </userDefinedRuntimeAttributes>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mE7-KR-XYq">
+                                <rect key="frame" x="20" y="388.5" width="335" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="RNV-fq-QD0"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="fontColor" value="primary"/>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="loginAction:" destination="rkb-tR-Tlb" eventType="touchUpInside" id="csA-MS-2yY"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bPp-jS-Hjb">
+                                <rect key="frame" x="16" y="617" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z6p-oG-Kw6">
+                                <rect key="frame" x="313" y="617" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Nj3-eI-2Zz">
+                                <rect key="frame" x="20" y="278.5" width="335" height="50"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="leftIconName" value="user"/>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="localizedPlaceHolder" value="username"/>
+                                </userDefinedRuntimeAttributes>
+                            </textField>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Nj3-eI-2Zz" firstAttribute="height" secondItem="4Tn-1l-I6z" secondAttribute="height" id="8BG-6Q-Tmh"/>
+                            <constraint firstItem="pQH-2J-Hzx" firstAttribute="leading" secondItem="WHx-13-tVm" secondAttribute="leading" constant="100" id="BhM-sr-KXY"/>
+                            <constraint firstItem="WHx-13-tVm" firstAttribute="trailing" secondItem="4Tn-1l-I6z" secondAttribute="trailing" constant="20" id="JK5-6g-Z27"/>
+                            <constraint firstItem="mE7-KR-XYq" firstAttribute="top" secondItem="4Tn-1l-I6z" secondAttribute="bottom" constant="10" id="PT4-Ci-3sE"/>
+                            <constraint firstItem="WHx-13-tVm" firstAttribute="trailing" secondItem="Nj3-eI-2Zz" secondAttribute="trailing" constant="20" id="PoI-zL-eEA"/>
+                            <constraint firstItem="4Tn-1l-I6z" firstAttribute="leading" secondItem="WHx-13-tVm" secondAttribute="leading" constant="20" id="Svy-sX-hzr"/>
+                            <constraint firstItem="4Tn-1l-I6z" firstAttribute="top" secondItem="Nj3-eI-2Zz" secondAttribute="bottom" id="X1a-kV-0dc"/>
+                            <constraint firstItem="WHx-13-tVm" firstAttribute="trailing" secondItem="pQH-2J-Hzx" secondAttribute="trailing" constant="100" id="bed-Xy-PxF"/>
+                            <constraint firstItem="4Tn-1l-I6z" firstAttribute="centerX" secondItem="0ND-xg-d2C" secondAttribute="centerX" id="dUL-Az-pGq"/>
+                            <constraint firstItem="pQH-2J-Hzx" firstAttribute="top" secondItem="WHx-13-tVm" secondAttribute="top" constant="8" id="fWW-Jr-aD3"/>
+                            <constraint firstItem="Nj3-eI-2Zz" firstAttribute="leading" secondItem="WHx-13-tVm" secondAttribute="leading" constant="20" id="l2A-1R-qXo"/>
+                            <constraint firstItem="WHx-13-tVm" firstAttribute="trailing" secondItem="mE7-KR-XYq" secondAttribute="trailing" constant="20" id="nwn-pm-usn"/>
+                            <constraint firstItem="4Tn-1l-I6z" firstAttribute="centerY" secondItem="0ND-xg-d2C" secondAttribute="centerY" constant="20" id="t58-ZL-I4w"/>
+                            <constraint firstItem="mE7-KR-XYq" firstAttribute="leading" secondItem="WHx-13-tVm" secondAttribute="leading" constant="20" id="yMT-3G-peY"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="WHx-13-tVm"/>
                     </view>
                     <navigationItem key="navigationItem" id="wCj-CS-Use"/>

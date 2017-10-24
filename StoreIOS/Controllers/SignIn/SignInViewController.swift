@@ -1,14 +1,17 @@
 //
-//  MainTabBarViewController.swift
+//  SignInViewController.swift
 //  StoreIOS
 //
-//  Created by Daniel Klinkert Houfer on 10/19/17.
+//  Created by Daniel Klinkert Houfer on 10/23/17.
 //  Copyright © 2017 Daniel Klinkert Houfer. All rights reserved.
 //
 
 import UIKit
+import SVProgressHUD
 
-class MainTabBarViewController: BaseTabBarViewController {
+class SignInViewController: BaseViewController {
+    
+    var successClosure:((_ user:DKHUser)->())!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,19 +24,14 @@ class MainTabBarViewController: BaseTabBarViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    override func tabBar(_ tabBar: UITabBar, didSelect item: UITabBarItem) {
+    @IBAction func loginAction(_ sender: Any) {
+        DKHUser.login(email: "oscarg798@gmail.com", password: "worker", successClosure: successClosure, errorClosure: {error in
+            
+            SVProgressHUD.showInfo(withStatus: error)
+        })
     }
     
-    private func checkUser() {
-        if !DKHUser.isLoggedIn {
-            let signInNav = DKHNavigation.signInNavigationViewController()
-            let signInVC  = signInNav.topViewController as!  SignInViewController
-            signInVC.successClosure = { _ in
-                self.dismiss(animated: true, completion: nil)
-            }
-            self.present(signInNav, animated: true, completion: nil)
-        }
-    }
+    
 
     /*
     // MARK: - Navigation

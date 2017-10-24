@@ -28,6 +28,7 @@ extension APIEndpoint {
 }
 
 enum DKHEndPoint {
+    case login(email:String,password:String)
     case register(name:String,email:String,password:String,userType:String)
     case getCategories()
     case getProductsByCategory(categoryUuid:String)
@@ -45,10 +46,12 @@ extension DKHEndPoint:APIEndpoint {
     
     var path:String {
         switch self {
+        case .login(email: _, password: _):
+            return "session"
         case .getCategories():
             return "category"
         case .getProductsByCategory(categoryUuid: let categoryUUid):
-            return "product\(categoryUUid)"
+            return "product/category/\(categoryUUid)"
         case .register(name: _, email: _, password: _, userType: _):
             return "user"
         default:
@@ -60,7 +63,7 @@ extension DKHEndPoint:APIEndpoint {
     var method: HTTPMethod {
         
         switch self {
-        case .register(name: _, email: _, password: _, userType: _):
+        case .register(name: _, email: _, password: _, userType: _),.login(email: _, password: _):
             return .post
         default:
             return .get
@@ -72,16 +75,19 @@ extension DKHEndPoint:APIEndpoint {
         switch self {
         case .register(name: let name, email: let email, password: let password, userType: _):
             return ["name":name,"email":email,"password":password,"userType":"str"]
+        case .login(email: let email, password: let password):
+            return ["email":email,"password":password]
         default:
             return [:]
         }
     }
     
     var customHeaders:[String:String]? {
-        let pre = NSLocale.preferredLanguages[0]
+        //let pre = NSLocale.preferredLanguages[0]
         switch self {
         default:
-            return ["Authorization": "Bearer \("hola")","Content-Type":"application/json","Accept-Language":pre]
+            guard let user = DKHUser.currentUser else {return nil}
+            return ["Authorization": "Bearer \(user.token)","Content-Type":"application/json"]
         }
     }
     

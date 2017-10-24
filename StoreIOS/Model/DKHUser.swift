@@ -40,12 +40,28 @@ class DKHUser: Object,Mappable {
         self.init()
     }
     
+   override class func primaryKey() -> String? { return "uuid" }
+    
     func mapping(map: Map) {
+        
         
         uuid        <- map["uuid"]
         name        <- map["name"]
         email       <- map["userType"]
         token       <- map["token"]
+    }
+    
+    class func login(email:String,password:String,successClosure: @escaping (_ user:DKHUser)->(),errorClosure:@escaping (_ message:String)->()) {
+        DKHAPIClient.sharedClient.requestObject(endpoint: DKHEndPoint.login(email: email, password: password), completionHandler: { (user:DKHUser) in
+            Realm.update(updateClosure: { (realm) in
+                realm.delete(realm.objects(DKHUser.self))
+                realm.add(user)
+            })
+            successClosure(user)
+        }, errorClosure: {error in
+            
+            errorClosure(error.localizedDescription)
+        })
     }
     
 
