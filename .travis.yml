@@ -1,4 +1,4 @@
 language: objective-c
 osx_image: xcode9.2
-script:
-    - xcodebuild clean test -project StoreIOS.xcworkspace -scheme StoreIOS -destination "platform=iOS Simulator,name=iPhone 8,OS=11.0" CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO ONLY_ACTIVE_ARCH=NO -quiet
+xcode_project: StoreIOS.xcworkspace # path to your xcodeproj folder
+xcode_scheme: StoreIOS
