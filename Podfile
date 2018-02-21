@@ -11,8 +11,6 @@ target 'StoreIOS' do
 	pod 'AlamofireImage'
 	pod 'ObjectMapper'
     pod 'RealReachability'
-    pod 'RxSwift',    '~> 4.0'
-    pod 'RxCocoa',    '~> 4.0'
     pod 'AlamofireObjectMapper', :git => 'https://github.com/tristanhimmelman/AlamofireObjectMapper', :branch => 'swift-4'
     pod 'FBSDKLoginKit'
     pod 'ReachabilitySwift', '~> 3'

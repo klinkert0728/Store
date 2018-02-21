@@ -5,26 +5,26 @@
 //  Created by Daniel Klinkert Houfer on 4/7/17.
 //  Copyright © 2017 Daniel Klinkert Houfer. All rights reserved.
 //
-import RxSwift
-import RxCocoa
-
-infix operator <~> : AssignmentPrecedence
-//Bidirectional bind RxSwift, swift 3
-public func <~> <E,C: ControlPropertyType>(property: C, variable: Variable<E>) -> Disposable where C.E == E? {
-    
-    let bindToUIDisposable = variable.asObservable()
-        .bind(to: property)
-    let bindToVariable = property
-        .subscribe(onNext: { n in
-            if let n = n{
-                variable.value = n
-            }
-        }, onCompleted:  {
-            bindToUIDisposable.dispose()
-        })
-    
-    return Disposables.create([bindToUIDisposable, bindToVariable])
-}
+//import RxSwift
+//import RxCocoa
+//
+//infix operator <~> : AssignmentPrecedence
+////Bidirectional bind RxSwift, swift 3
+//public func <~> <E,C: ControlPropertyType>(property: C, variable: Variable<E>) -> Disposable where C.E == E? {
+//    
+//    let bindToUIDisposable = variable.asObservable()
+//        .bind(to: property)
+//    let bindToVariable = property
+//        .subscribe(onNext: { n in
+//            if let n = n{
+//                variable.value = n
+//            }
+//        }, onCompleted:  {
+//            bindToUIDisposable.dispose()
+//        })
+//    
+//    return Disposables.create([bindToUIDisposable, bindToVariable])
+//}
 
 extension Array {
     mutating func removeObject<U: Equatable>(object: U) {
