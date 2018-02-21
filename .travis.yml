@@ -1,4 +1,2 @@
 language: objective-c
-osx_image: xcode9.2
-xcode_project: StoreIOS.xcworkspace # path to your xcodeproj folder
-xcode_scheme: StoreIOS
+script: xcodebuild -workspace StoreIOS.xcworkspace -scheme StoreIOS -sdk iphonesimulator ONLY_ACTIVE_ARCH=NO
